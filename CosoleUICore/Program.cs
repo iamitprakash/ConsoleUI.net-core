@@ -7,7 +7,7 @@ using Serilog;
 
 //DI
 //Logging
-//Settings
+//Settings eplained
 namespace CosoleUICore
 {
     class Program
