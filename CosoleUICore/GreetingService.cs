@@ -19,8 +19,8 @@ namespace CosoleUICore
         {
             for (int i = 0; i < _config.GetValue<int>("Loop"); i++)
             {
-                //This is number
-                _log.LogInformation("Run number { runnumber }", i);
+                
+                _log.LogInformation("Run number {runnumber}", i);
             }
         }
     }

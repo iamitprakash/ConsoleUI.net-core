@@ -27,6 +27,9 @@ namespace CosoleUICore
                  services.AddTransient<IGreetingService, GreetingService>();
              }).UseSerilog().Build();
 
+            var svc = ActivatorUtilities.CreateInstance<GreetingService>(host.Services);
+            svc.Run();
+
             static void BuildConfig(IConfigurationBuilder builder)
             {
                 builder.SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
